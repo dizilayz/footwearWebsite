@@ -24,15 +24,6 @@ h1 {
   padding: 16px;
 }
 
-#total-price {
-  padding: 16px;
-  text-align: right;
-}
-
-#checkout-button {
-  width: 100%;
-}
-
 .product-container {
   align-content: 'center';
   border-bottom: 1px solid #ddd;

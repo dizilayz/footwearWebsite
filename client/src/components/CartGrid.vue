@@ -1,7 +1,7 @@
 <template>
     <div>
         <CartGridItem
-        v-for="product in cartItems"
+        v-for="product in products"
         :key="product.id"
         :product="product"
         />
@@ -13,7 +13,7 @@ import CartGridItem from './CartGridItem.vue';
 
     export default {
     name: "CartGrid",
-    props: ["cartItems"],
+    props: ["products"],
     components: { CartGridItem }
 }
 </script>
