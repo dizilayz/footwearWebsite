@@ -1,11 +1,13 @@
 <template>
-    <div>
+    <div v-if="products.length" >
         <CartGridItem
         v-for="product in products"
         :key="product.id"
         :product="product"
+        @remove-from-cart="$emit('remove-from-cart', $event)"
         />
     </div>
+    <p v-else>You haven't added anything yet!</p>
 </template>
 
 <script>
@@ -14,7 +16,12 @@ import CartGridItem from './CartGridItem.vue';
     export default {
     name: "CartGrid",
     props: ["products"],
-    components: { CartGridItem }
+    components: { CartGridItem },
+    methods: {
+        removeFromCart() {
+            this.$emit('remove-from-cart', this.$event);
+        }
+    }
 }
 </script>
 
